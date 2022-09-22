@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
         android:layout_marginEnd="10dp"
+        android:src="@drawable/accionsuma"
         app:layout_constraintEnd_toStartOf="@+id/resta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -33,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="400dp"
+        android:src="@drawable/restaaccion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/suma"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,18 +46,53 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="10dp"
+        android:src="@drawable/multiaccion"
         app:layout_constraintEnd_toStartOf="@+id/divi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/suma"
         app:srcCompat="@drawable/multin" />
+    android:src="@drawable/multiaccion"
 
     <ImageButton
         android:id="@+id/divi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:src="@drawable/diviaccion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/multi"
         app:layout_constraintTop_toBottomOf="@+id/resta"
         app:srcCompat="@drawable/divin" />
+
+    <EditText
+        android:id="@+id/operandoUno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Operando1"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/operandoDos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Operando2"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operandoUno" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/resta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operandoDos" />
 </androidx.constraintlayout.widget.ConstraintLayout>
